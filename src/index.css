@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  /* border: 1px solid red; */
+}
+.no-scroll {
+  overflow: hidden;
+}
+.zind2{
+  position: relative;
+  z-index: 99;
+}
+.contain{
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar{
+  background-image: url(../src/assets/bg2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.menu-slide {
+  position: fixed; 
+  right: -100%;   
+  top: 0;
+  width: 100%;
+  height: 100vh;   
+  background-color: white;
+  transition: right 0.3s ease-in-out; 
+  z-index: 99999;
+}
+
+.menu-slide.open {
+  right: 0; 
+}
+
+.poppins{
+  font-family: "Poppins", sans-serif;
+}
+.bg1{
+  background-image: url(../src/assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.bg2{
+  background-image: url(../src//assets/bg2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.bg3{
+  background-image: url(../src//assets/bg3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.bg4{
+  background-image: url(../src//assets/bg4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.grad1{
+  background: rgb(1,251,238);
+  background: linear-gradient(65deg, rgba(1,251,238,1) 0%, rgba(0,219,206,0.9) 50%);
+}
+.grad2{
+  background: rgb(153,87,214);
+  background: linear-gradient(85deg, rgba(153,87,214,1) 0%, rgba(182,95,247,0.8) 50%);
+}
+.grad3{
+  background: rgb(254,123,106);
+  background: linear-gradient(142deg, rgba(254,123,106,1) 0%, rgba(255,168,109,1) 50%);
+}
+
+.shad{
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+/* .popup{
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+} */
+
+.swiper {
+  width: 100%;
+  height: 90vh;
+  background-color: #000;
+  margin-top: -5px;
+  background-image: url(../src/assets/bg3.png);
+}
+
+.swiper-slide {
+  background-image: url(/src/assets/bg3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gradient-text1 {
+  background-image: linear-gradient(65deg, rgba(255,119,105,1) 0%, rgba(254,168,107,1) 50%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.gradient-text2 {
+  background-image: linear-gradient(65deg, rgba(148,87,209,1) 0%, rgba(184,95,248,1) 50%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.gradient-text3 {
+  background-image: linear-gradient(65deg, rgba(1,252,237,1) 0%, rgba(2,217,204,1) 50%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.gradient-bg1{
+  background-image: linear-gradient(65deg, rgba(255,119,105,1) 0%, rgba(254,168,107,1) 50%);
+}
+.gradient-bg2{
+  background-image: linear-gradient(65deg, rgba(148,87,209,1) 0%, rgba(184,95,248,1) 50%);
+}
+.gradient-bg3{
+  background-image: linear-gradient(65deg, rgba(1,252,237,1) 0%, rgba(2,217,204,1) 50%);
+}
+
+.moving-div {
+  animation: moveLeftRight 2.9s infinite alternate;
+}
+.moving-div2 {
+  animation: moveLeftRight2 2.9s infinite alternate;
+  animation-delay: 1.8s;
+}
+.zind{
+  z-index: 999999;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #a85be7 #a85be7 transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #FF3D00 #FF3D00;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: #a85be7 #a85be7 transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+    
+    
+
+@keyframes moveLeftRight {
+  0% {
+      transform: translateX(-5px);
+  }
+  100% {
+      transform: translateX(50px);
+  }
+}
+
+@keyframes moveLeftRight2 {
+  0% {
+      transform: translateX(-5px);
+  }
+  100% {
+      transform: translateX(50px);
+  }
+}
+
+
+@media (1600px < width < 10000px){
+  .contain{
+    max-width: 1500px;
+  }
+}

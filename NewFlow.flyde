@@ -1,0 +1,82 @@
+imports:
+  "@flyde/stdlib":
+    - InlineValue
+    - CodeExpression
+    - Loop List
+    - Http
+    - Interval
+node:
+  instances:
+    - pos:
+        x: 172.41898925781248
+        y: -78.7782421875
+      id: o8eu0ukgnzjme4rrmael3ivb
+      inputConfig: {}
+      nodeId: InlineValue__o8eu0ukgnzjme4rrmael3ivb
+      macroId: InlineValue
+      macroData:
+        type: string
+        value: Hello
+        label: '"Hello"'
+    - pos:
+        x: 88.82035644531248
+        y: 75.5270556640625
+      id: gi0sduu2rj9up9r3bki4r5cg
+      inputConfig: {}
+      nodeId: CodeExpression__gi0sduu2rj9up9r3bki4r5cg
+      macroId: CodeExpression
+      macroData:
+        value: inputs.a + inputs.b
+        label: '"inputs.a + inputs.b"'
+    - pos:
+        x: -32.918474121093766
+        y: -64.91297729492187
+      id: Loop List-9t049ce
+      inputConfig: {}
+      nodeId: Loop List
+    - pos:
+        x: -360.1225146484375
+        y: -4.163282470703123
+      id: zmkbm57ut4x3e9qnzix3s2rx
+      inputConfig: {}
+      nodeId: Http__zmkbm57ut4x3e9qnzix3s2rx
+      macroId: Http
+      macroData:
+        method:
+          mode: static
+          value: GET
+        url:
+          mode: static
+          value: https://www.example.com
+        headers:
+          mode: static
+          value: {}
+        params:
+          mode: static
+          value: {}
+        data:
+          mode: static
+          value: {}
+    - pos:
+        x: -90.69682128906248
+        y: 105.83991821289062
+      id: fsqrjhdy64d93huohpaafyvz
+      inputConfig: {}
+      nodeId: Interval__fsqrjhdy64d93huohpaafyvz
+      macroId: Interval
+      macroData:
+        time:
+          mode: static
+          value: 1000
+        value:
+          mode: static
+          value: ""
+  connections: []
+  id: Example
+  inputs: {}
+  outputs: {}
+  inputsPosition: {}
+  outputsPosition:
+    result:
+      x: -23.264428942324532
+      y: 237.25953921502617
